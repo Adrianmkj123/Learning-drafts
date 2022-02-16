@@ -1,0 +1,134 @@
+#include <iostream>
+#include <string>
+
+int main() {
+  
+  int begin = 0; // sets the start to the three different pathway questions
+
+  std::cout << "===\nYou are about to play a relational psychology game.\n";
+
+  
+
+for (int i = 3; i > 1; i--) // sets a loop so that the program doesnt end instantly after inputting something wrong
+{
+  std::cout << "===\nDo you wish to continue?\n1) Yes\n2) No\n";
+
+  std::cin >> begin; // allows user to decide if he wants to continue or not
+
+  if (begin == 1){ // The main pathway to the story
+
+    std::cout << "You're in a forest surrounded with trees. You see a hut, it looks vacant. \nDo you choose to either\n1) Go in the hut\n2) Walk past the hut.\n";
+
+    int second = 0;
+
+    std::cin >> second;
+
+    if (second == 1){
+      
+      int table = 0;
+
+      std::cout << "===\nYou have chosen to enter the hut.\n";
+
+      std::cout << "In the hut you see a table, what is the shape of the table, is it\n1) Rounded\n2) Square like shape\n";
+
+      std::cin >> table;
+
+        if (table == 1) {
+
+          std::cout << "-You have said that the table is rounded.\n";
+          
+          std::cout << "=\nOn the rounded table there is a mug, what material is the mug made out of?\n";
+
+          std::cout << "1) Glass\n2) Clay\n3) Wood\n4) Other\n";
+
+          int numMaterial = 0;
+
+          std::string material = "null";
+
+          std::cin >> numMaterial;
+
+          switch (numMaterial){
+
+            case 1:
+              material = "Glass";
+
+              std::cout << material << "\n";
+
+              break;
+
+            case 2:
+              material = "Clay";
+
+              std::cout << material << "\n";
+
+              break;
+
+        } else if (table == 2){
+
+            std::cout << "-You have said that the table is a square.\n";
+
+            std::cout << "=\nOn the square table there is a mug, what material is the mug made out of?\n";
+
+           std::cout << "1) Glass\n2) Clay\n3) Wood\n4) Other\n";
+
+           int numMaterial = 0;
+
+           std::string material = "null";
+
+           std::cin >> numMaterial;
+
+           switch (numMaterial){
+
+            case 1:
+              material = "Glass";
+
+              std::cout << material << "\n";
+
+              break;
+
+            case 2:
+              material = "Clay";
+
+              std::cout << material << "\n";
+
+              break;
+              
+          }
+
+        } else {
+          
+          std::cout << "Invalid Input...\n";
+          std::cout << "=\nYou have " << i << " attempts left.\n=\n";
+        }
+  //Ended options
+    } else if (second == 2){
+
+      std::cout << "You have chosen to walk past the hut.\nThe hut symbolises how ready you are for a relationship. Since you have walked past it, it shows you are currently not ready for one.\n";
+
+      return 0;
+
+    } else {
+
+      std::cout << "Invalid Input...\n";
+
+      std::cout << "=\nYou have " << i << " attempts left.\n=\n";
+    }
+
+  }  //Other options ---
+  
+      else if (begin == 2){
+
+    std::cout << "You have cancelled the test. The program will now end...\n.";
+
+    return 0;
+
+
+    } else {
+
+    std::cout << "Invalid input...\n";
+
+    std::cout << "=\nYou have " << i << " attempts left.\n=\n";
+
+    }
+} // For loop end bracket
+} // main function end bracket
